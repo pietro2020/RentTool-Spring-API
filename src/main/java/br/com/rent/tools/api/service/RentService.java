@@ -2,6 +2,7 @@ package br.com.rent.tools.api.service;
 
 import br.com.rent.tools.api.dto.CreateRentDto;
 import br.com.rent.tools.api.dto.RentDto;
+import br.com.rent.tools.api.model.Available;
 import br.com.rent.tools.api.model.Client;
 import br.com.rent.tools.api.model.Rent;
 import br.com.rent.tools.api.model.Tool;
@@ -32,10 +33,10 @@ public class RentService {
         Tool tool = returnToolById(dto.toolId());
 
         boolean rentTool = rentRepository.existsByToolAndStatusTrue(tool);
-        boolean availableTool = toolRepository.existsByIdAndAvailable(tool.getId(), tool.getAvailable());
+        boolean availableTool = toolRepository.existsByIdAndAvailable(tool.getId(), Available.AVAILABLE);
         boolean clientLimit = rentRepository.hasMoreEqualsThanRents(client, client.rentLimit());
 
-        if(!rentTool && availableTool && !clientLimit) {
+        if(rentTool || !availableTool || clientLimit) {
             throw new ValidationException("Não foi possível fazer o aluguel");
         }
 
