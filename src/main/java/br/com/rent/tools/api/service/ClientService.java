@@ -47,8 +47,6 @@ public class ClientService {
 
     }
 
-
-
     private Client returnClientById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
