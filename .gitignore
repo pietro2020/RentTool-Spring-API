@@ -1,0 +1,56 @@
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Maven wrapper - mantém os scripts
+!.mvn/wrapper/maven-wrapper.properties
+
+# Spring Boot
+spring-boot-devtools.properties
+
+# Logs
+*.log
+logs/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Application local configuration
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# IDE - STS / Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Gradle
+.gradle/
+build/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

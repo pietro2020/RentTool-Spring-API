@@ -1,0 +1,34 @@
+package br.com.rent.tools.api.model;
+
+public enum Category {
+
+    ELETRICA,
+    MANUAL,
+    CONSTRUCAO,
+    JARDINAGEM,
+    PINTURA,
+    HIDRAULICA,
+    ELETRICA_AUTOMOTIVA,
+    AUTOMOTIVA,
+    MECANICA,
+    SOLDAGEM,
+    CORTE,
+    PERFURACAO,
+    LIXAMENTO,
+    POLIMENTO,
+    MEDICAO,
+    DEMOLICAO,
+    COMPACTACAO,
+    MOVIMENTACAO,
+    LIMPEZA,
+    MARCENARIA,
+    SERRALHERIA,
+    ALVENARIA,
+    TELHADO,
+    PAVIMENTACAO,
+    INSTALACAO,
+    EQUIPAMENTO_DE_SEGURANCA,
+    ACESSORIOS,
+    OUTROS;
+
+}
