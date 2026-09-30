@@ -27,6 +27,112 @@ O projeto foi feito para praticar desenvolvimento backend e trabalhar com cadast
 * Validações e tratamento de exceções
 * Testes unitários
 
+## Endpoints
+
+### Clientes
+
+#### `POST /client`
+
+Cadastra um cliente.
+
+```json
+{
+    "name": "string",
+    "cpf": "00000000000",
+    "category": "REGULAR"
+}
+```
+
+#### `GET /client/{id}`
+
+Busca um cliente pelo ID.
+
+#### `PUT /client/{id}`
+
+Atualiza um cliente.
+
+```json
+{
+    "name": "string",
+    "category": "REGULAR"
+}
+```
+
+### Ferramentas
+
+#### `POST /tool`
+
+Cadastra uma ferramenta.
+
+```json
+{
+    "name": "string",
+    "price": 0.0,
+    "category": "ELETRICA",
+    "description": "string",
+    "minimumRentalDays": 0,
+    "condition": "NEW"
+}
+```
+
+#### `GET /tool`
+
+Lista todas as ferramentas.
+
+#### `GET /tool/{id}`
+
+Busca uma ferramenta pelo ID.
+
+#### `GET /tool?name={name}`
+
+Busca ferramentas pelo nome.
+
+#### `PUT /tool/{id}`
+
+Atualiza uma ferramenta.
+
+```json
+{
+    "price": 0.0,
+    "minimumRentalDays": 0,
+    "condition": "GOOD"
+}
+```
+
+#### `PATCH /tool/disable/{id}`
+
+Deixa uma ferramenta indisponível.
+
+#### `PATCH /tool/enable/{id}`
+
+Deixa uma ferramenta disponível.
+
+#### `PATCH /tool/maintenance/{id}`
+
+Coloca uma ferramenta em manutenção.
+
+### Aluguéis
+
+#### `POST /rent`
+
+Cria um aluguel.
+
+```json
+{
+    "days": 0,
+    "clientId": 0,
+    "toolId": 0
+}
+```
+
+#### `GET /rent`
+
+Lista os aluguéis ativos.
+
+#### `PATCH /rent/{id}/finish`
+
+Finaliza um aluguel.
+
 ## Como executar
 
 Clone o projeto:
